@@ -1,60 +1,92 @@
 <template>
   <v-app>
+    
+
     <v-app-bar
       app
-      color="primary"
+      clipped-left
+      color=#0A7064
+      dense
       dark
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
+      <v-toolbar-title class="mr-12 align-center">
+        <span class="title">Christy Graves</span>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
+      <v-row
+        align="center"
+        style="max-width: 650px"
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+        <v-btn
+          to="/"
+          large
+          text
+          v-on="on"
+        >
+          <span class="white--text">
+            Work
+          </span>
+        </v-btn>
+        <v-btn
+          to="/about"
+          large
+          text
+          v-on="on"
+        >
+          <span class="white--text">
+            About
+          </span>
+        </v-btn>
+      </v-row>
     </v-app-bar>
 
-    <v-content>
-      <HelloWorld/>
-    </v-content>
+    <v-main>
+      <v-container
+        class="fill-height"
+        fluid
+      >
+        <v-row
+          align="center"
+          justify="center"
+        >
+          <v-col class="text-center">
+            <v-tooltip left>
+              <template v-slot:activator="{ on }">
+                <v-btn
+                  :href="source"
+                  icon
+                  large
+                  target="_blank"
+                  v-on="on"
+                >
+                  <v-icon large>mdi-code-tags</v-icon>
+                </v-btn>
+              </template>
+              <span>Source</span>
+            </v-tooltip>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+    <v-footer
+      color=#0A7064
+      app
+    >
+      <span class="white--text">Find this site's GitHub repository <a href="https://github.com/MetaRyan/cs260-creative-project-3">here</a></span>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+
 
 export default {
   name: 'App',
-
-  components: {
-    HelloWorld,
+  props: {
+    source: String,
   },
+  components: {
 
-  data: () => ({
-    //
-  }),
+  },
 };
 </script>
