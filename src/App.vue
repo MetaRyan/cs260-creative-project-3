@@ -14,8 +14,9 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-row
-        align="center"
         style="max-width: 650px"
+        class="text-right"
+        justify="end"
       >
         <v-btn
           to="/"
@@ -72,7 +73,9 @@
       color=#0A7064
       app
     >
-      <span class="white--text">Find this site's GitHub repository <a href="https://github.com/MetaRyan/cs260-creative-project-3">here</a></span>
+      <v-spacer/>
+      <span class="white--text footer-text">Find this site's GitHub repository <a href="https://github.com/MetaRyan/cs260-creative-project-3">here</a></span>
+      <v-spacer/>
     </v-footer>
   </v-app>
 </template>
@@ -90,3 +93,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+  .footer-text a {
+    color: #17FFE4;
+    text-decoration: none;
+  }
+</style>
