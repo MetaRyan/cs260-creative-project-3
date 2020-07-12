@@ -22,7 +22,6 @@
           to="/"
           large
           text
-          v-on="on"
         >
           <span class="white--text">
             Work
@@ -32,7 +31,6 @@
           to="/about"
           large
           text
-          v-on="on"
         >
           <span class="white--text">
             About
