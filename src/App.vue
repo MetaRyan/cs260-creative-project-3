@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app id="app">
     
 
     <v-app-bar
@@ -10,7 +10,7 @@
       dark
     >
       <v-toolbar-title class="mr-12 align-center">
-        <span class="title">Christy Graves</span>
+        <span id="title">Christy Graves</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-row
@@ -42,31 +42,8 @@
     </v-app-bar>
 
     <v-main>
-      <v-container
-        class="fill-height"
-        fluid
-      >
-        <v-row
-          align="center"
-          justify="center"
-        >
-          <v-col class="text-center">
-            <v-tooltip left>
-              <template v-slot:activator="{ on }">
-                <v-btn
-                  :href="source"
-                  icon
-                  large
-                  target="_blank"
-                  v-on="on"
-                >
-                  <v-icon large>mdi-code-tags</v-icon>
-                </v-btn>
-              </template>
-              <span>Source</span>
-            </v-tooltip>
-          </v-col>
-        </v-row>
+      <v-container fluid>
+        <router-view/>
       </v-container>
     </v-main>
     <v-footer
@@ -95,8 +72,18 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
   .footer-text a {
     color: #17FFE4;
     text-decoration: none;
   }
+  #app {
+    background: #E7FFF8;
+  }
+  .v-application {
+   font-family: 'Raleway', sans-serif !important;
+ }
+ #title {
+   font-family: 'Raleway', sans-serif !important;
+ }
 </style>

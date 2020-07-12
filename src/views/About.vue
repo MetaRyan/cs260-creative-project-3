@@ -1,7 +1,45 @@
 <template>
   <div class="about">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <v-container fluid>
+      <v-row>
+        <v-col
+          align="center">
+          <h1>About Christy</h1>
+        </v-col>
+      </v-row>
+      <v-row
+        align="center"
+        justify="center">
+        <v-col
+          xs="12"
+          sm="8"
+          md="6"
+          lg="6"
+          xl="4">
+          <p>
+            Christy Graves is a student at Brigham Young University studying graphic design.
+            <br>
+            She comes from a basicground in more traditional art, giving her a keen sense of what looks good on a page.
+            <br>
+            She has a breadth of work in various fields, including 3D design, sketches, graphic design, animation, and web design.
+          </p>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col 
+          align="center">
+          <h1>Contact</h1>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col
+          align="center">
+          <p>
+            NotHerRealEmail@ryan-graves.me
+          </p>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
