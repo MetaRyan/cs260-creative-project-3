@@ -21,7 +21,13 @@ Vue.use(VueRouter)
     path: '/art/:id',
     name: 'ArtPage',
     component: ArtPage,
-    props: true
+    props: (route) => {
+      const id = Number.parseInt(route.params.id, 10)
+      if (Number.isNaN(id)) {
+        return 0
+      }
+      return { id }
+    }
   },
 ]
 

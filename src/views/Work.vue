@@ -9,9 +9,16 @@
             :key="image.id"
             class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item">
             <router-link :to="{ name: 'ArtPage', params: { id: image.id } }">
-              <img 
-                :src="'/images/'+image.src"
+              <div v-if="image.preview === ''">
+                <img 
+                  :src="'/images/' + image.src"
                 />
+              </div>
+              <div v-else>
+                <img 
+                  :src="'/images/' + image.preview"
+                />
+              </div>
             </router-link>
           </WaterfallItem>
         </Waterfall>
@@ -39,7 +46,9 @@ export default {
   computed: {
     images() {
       return this.$root.$data.art;
-    }
+    },
+  },
+  methods: {
   }
 }
 </script>
