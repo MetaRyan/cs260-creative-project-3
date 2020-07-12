@@ -19,9 +19,9 @@
           <p>
             Christy Graves is a student at Brigham Young University studying graphic design.
             <br>
-            She comes from a basicground in more traditional art, giving her a keen sense of what looks good on a page.
+            She has a background in traditional and digital art.
             <br>
-            She has a breadth of work in various fields, including 3D design, sketches, graphic design, animation, and web design.
+            She has experience in branding, typography, motion design and web design.
           </p>
         </v-col>
       </v-row>
