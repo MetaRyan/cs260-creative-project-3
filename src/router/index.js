@@ -19,8 +19,9 @@ Vue.use(VueRouter)
   },
   {
     path: '/art/:id',
-    name: 'Art Page',
-    component: ArtPage
+    name: 'ArtPage',
+    component: ArtPage,
+    props: true
   },
 ]
 

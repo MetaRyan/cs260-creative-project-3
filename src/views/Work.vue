@@ -8,7 +8,7 @@
             v-for="image in images" 
             :key="image.id"
             class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item">
-            <router-link :to="'/art/'+ image.id">
+            <router-link :to="{ name: 'ArtPage', params: { id: image.id } }">
               <img 
                 :src="'/images/'+image.src"
                 />
